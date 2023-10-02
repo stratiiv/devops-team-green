@@ -1,4 +1,4 @@
-## SoftServe Cisco, First Task to create Scripts
+## SoftServe Cisco, First Task to create Scripts 
 
 ### - Написати скрипт, який аргументами приймає шлях та розширення файлів, а повертає всі файли з таким розширенням в даній директорії						
 						
