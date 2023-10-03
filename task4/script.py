@@ -13,7 +13,7 @@ def find_files_with_text(directory: str, text: str) -> List[str]:
         for file in files:
             filename = os.path.join(subdir, file)
             if Path(filename).suffix == '.txt':
-                with open(filename) as f:
+                with open(filename, encoding='utf8', errors='ignore') as f:
                     if text in f.read():
                         matching_files.append(filename)
     return matching_files
