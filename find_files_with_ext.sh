@@ -15,8 +15,6 @@ if [ ! -d "$dir" ]; then
     exit 1
 fi
 
-# Change the current working directory to the provided directory path or exit if unsuccessful
-cd "$dir" || exit 1
 
 # Use the 'find' command to search for files with the specified extension in the current directory and its subdirectories
-find . -type f -name "*$ext" -print
+find "$dir" -type f -name "*$ext" -print
