@@ -7,7 +7,7 @@ else
 	exit 1
 fi
 
-if[! -d "$aPath"] then
+if [! -d "$aPath"] then
 	echo "directory '$aPath' does not exists"
 	exit 1
 fi
