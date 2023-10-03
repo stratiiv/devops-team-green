@@ -3,7 +3,7 @@ if [ "$#" -eq 2 ]; then
 	aPath="$1"
 	aExt="$2"
 else
-	echo "Error; args PATH and EXTENTION are necessary"
+	echo "Error; args PATH and EXTENSION are necessary"
 	exit 1
 fi
 
