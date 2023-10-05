@@ -22,7 +22,14 @@
       "ignore": false,
       "show_online_status": true,
       "restart_timer": true,
-      "non_steam_game": true
+      "non_steam_game": true,
+      "account": {
+        "login": "abc123",
+        "password": "12358432",
+        "asd": {
+          "password": "1111"
+        }
+      }
     },
     {
       "login": "sussy",
