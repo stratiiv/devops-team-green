@@ -3,7 +3,7 @@ import sys
 
 
 def find_password_in_toml(file_path):
-    with open(file_path, 'r') as tomlfile:
+    with open(file_path, 'r', encoding="utf8") as tomlfile:
         all_lines = ''
         for line in tomlfile:
             if 'password' in line.lower():
