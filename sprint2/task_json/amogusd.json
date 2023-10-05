@@ -1,11 +1,13 @@
-
+{
+  "accounts":
+  [
     {
-      "login": "00002012",
-      "password": "00002012",
+      "login": "sussy",
+      "password": "00002010",
       "login_key": "jbOmVg53xFA+7H9nnDk",
       "cell_id": 39,
       "parental_pin": 0,
-      "steam_id": 76561198021747400,
+      "steam_id": 12345,
       "status": 1,
       "last_activity": "2020-11-17T15:07:49.1327963+03:00",
       "rc_bot": false,
@@ -20,22 +22,76 @@
       "ignore": false,
       "show_online_status": true,
       "restart_timer": true,
-      "non_steam_game": true,
-      "non_steam_game_name": "FSOCIETY SERVICE BOT | FSOCIETY.BIZ",
-      "games": [
-        {
-          "app_id": 570,
-          "name": "Dota 2",
-          "needs_license_request": false,
-          "boosted_last_session": 0,
-          "boosted_total": 0
-        },
-        {
-          "app_id": 730,
-          "name": "Counter-Strike: Global Offensive",
-          "needs_license_request": false,
-          "boosted_last_session": 0,
-          "boosted_total": 0
-        }
-      ]
+      "non_steam_game": true
+    },
+    {
+      "login": "sussy",
+      "password": "00002032",
+      "login_key": "jbOmVg53xFA+7H9nnDk",
+      "cell_id": 39,
+      "parental_pin": 0,
+      "steam_id": 12345,
+      "status": 1,
+      "last_activity": "2020-11-17T15:07:49.1327963+03:00",
+      "rc_bot": false,
+      "hour_booster": false,
+      "boosting_limit": 0,
+      "key_activator": false,
+      "community_tasks": false,
+      "can_report": true,
+      "can_commend": true,
+      "last_report": "0001-01-01T00:00:00",
+      "last_commend": "0001-01-01T00:00:00",
+      "ignore": false,
+      "show_online_status": true,
+      "restart_timer": true,
+      "non_steam_game": true
+    },
+    {
+      "login": "sussy",
+      "password": "00002232",
+      "login_key": "jbOmVg53xFA+7H9nnDk",
+      "cell_id": 39,
+      "parental_pin": 0,
+      "steam_id": 12345,
+      "status": 1,
+      "last_activity": "2020-11-17T15:07:49.1327963+03:00",
+      "rc_bot": false,
+      "hour_booster": false,
+      "boosting_limit": 0,
+      "key_activator": false,
+      "community_tasks": false,
+      "can_report": true,
+      "can_commend": true,
+      "last_report": "0001-01-01T00:00:00",
+      "last_commend": "0001-01-01T00:00:00",
+      "ignore": false,
+      "show_online_status": true,
+      "restart_timer": true,
+      "non_steam_game": true
+    },
+    {
+      "login": "sussy",
+      "password": "00212312",
+      "login_key": "jbOmVg53xFA+7H9nnDk",
+      "cell_id": 39,
+      "parental_pin": 0,
+      "steam_id": 12345,
+      "status": 1,
+      "last_activity": "2020-11-17T15:07:49.1327963+03:00",
+      "rc_bot": false,
+      "hour_booster": false,
+      "boosting_limit": 0,
+      "key_activator": false,
+      "community_tasks": false,
+      "can_report": true,
+      "can_commend": true,
+      "last_report": "0001-01-01T00:00:00",
+      "last_commend": "0001-01-01T00:00:00",
+      "ignore": false,
+      "show_online_status": true,
+      "restart_timer": true,
+      "non_steam_game": true
     }
+  ]
+}

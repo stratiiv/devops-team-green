@@ -1,19 +1,25 @@
+
 import json
 import os
 from argparse import ArgumentParser
 
-def check_key(file_path, key):
-    try:#check if json file exists and is valid
+def check_key(file_path, keyword):
+    try: #check if json file exists and is valid
         with open(file_path, 'r') as json_log:
             data = json.load(json_log)
-            if key in data:
-                return data[key]
-            else:
-                return None
+            #elements = []
+            for case in data['accounts']:
+                if keyword in case:
+                    print(f"The value for key '{keyword}' #is: {case[keyword]}")
+                else:
+                    print(f"The key '{keyword}' does not exist in the file")
+                    return None
     except FileNotFoundError:
-        return None
+        print("Error: file not found")
+        return 1
     except json.JSONDecodeError:
-        return None
+        print("Error: file cannot be processed")
+        return 2
 
 
 parser = ArgumentParser()
@@ -21,10 +27,5 @@ parser.add_argument('f', help='path to json file')
 parser.add_argument('k', help='key to find in json file')
 arguments = parser.parse_args()
 file_path = arguments.f
-key = arguments.k
-result = check_key(file_path, key)
-
-if result is not None:
-    print(f"The value for key '{key}' is: {result}")
-else:
-    print(f"The key '{key}' does not exist in the file or the file could not be processed")
+keyword = arguments.k
+result = check_key(file_path, keyword)
