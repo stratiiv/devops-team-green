@@ -38,4 +38,4 @@ arguments = parser.parse_args()
 file_path = arguments.f
 keyword = arguments.k
 result = extract_values(check_key(file_path), keyword)
-print(result)
+print(*result, sep='\n')
