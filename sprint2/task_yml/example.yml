@@ -1,0 +1,11 @@
+hosts:
+  - host1:
+      password: host1_password123
+  - host2:
+      password: secure_password_456
+  - host3:
+      password: p@ssw0rd!
+  - host4:
+      password: my_secret_pass
+  - host5:
+      password: simple_password
