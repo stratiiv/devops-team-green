@@ -1,2 +1,0 @@
-python script-task-json.py amogusd.json 'password' 
-or any other key specified in ''
