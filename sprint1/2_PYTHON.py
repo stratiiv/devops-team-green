@@ -1,6 +1,5 @@
 from argparse import ArgumentParser
 import os
-from pathlib import Path
 from typing import List
 
 
@@ -12,10 +11,9 @@ def find_files_with_text(directory: str, text: str) -> List[str]:
     for subdir, dirs, files in os.walk(directory):
         for file in files:
             filename = os.path.join(subdir, file)
-            if Path(filename).suffix == '.txt':
-                with open(filename, encoding='utf8', errors='ignore') as f:
-                    if text in f.read():
-                        matching_files.append(filename)
+            with open(filename, encoding='utf8', errors='ignore') as f:
+                if text in f.read():
+                    matching_files.append(filename)
     return matching_files
 
 
