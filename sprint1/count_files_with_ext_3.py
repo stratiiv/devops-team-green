@@ -2,37 +2,32 @@ import os
 import sys
 
 
-def count_files_with_ext(directory, extension):
-    try:
-        count = 0
-        # Check if the directory exists
-        if not os.path.exists(directory):
-            raise FileNotFoundError(f'Directory "{directory}" not found.')
-
-        # Iterate through all files in the directory
-        for filename in os.listdir(directory):
-            if filename.endswith(f'.{extension}'):
-                count += 1
-
-        return count
-    except Exception as e:
-        return str(e)
+def count_files_with_ext(dir: str, ext: str) -> int:
+    """
+    Function to count number of files with extension
+    :param dir: Target Directory where to search
+    :param ext: Extension of File
+    :return: Count files
+    """
+    count = len([f for f in os.listdir(dir) if f.endswith(f'.{ext}')])
+    return count
 
 
 if __name__ == '__main__':
-    # Check for the presence of command-line arguments
-    if len(sys.argv) != 3:
-        print("Usage: python script.py <directory path> <extension>")
-        sys.exit(1)
+    try:
+        if len(sys.argv) != 3:
+            print("Usage: python script.py <directory path> <extension>")
+            sys.exit(1)
 
-    # Get command-line arguments
-    directory = sys.argv[1]
-    extension = sys.argv[2]
+        directory = sys.argv[1]
+        extension = sys.argv[2]
+        if not os.path.exists(directory):
+            raise FileNotFoundError(f'Directory "{directory}" not found.')
+        result = count_files_with_ext(directory, extension)
 
-    # Call the function to count files
-    result = count_files_with_ext(directory, extension)
-
-    if isinstance(result, int):
-        print(f'Number of files with the .{extension} extension in the directory {directory}: {result}')
-    else:
-        print(f'Error: {result}')
+        if isinstance(result, int):
+            print(result)
+        else:
+            print(f'Error: {result}')
+    except Exception as e:
+        print(str(e))
