@@ -3,8 +3,15 @@ import toml
 
 
 def find_password_in_toml(file_path):
+    """
+    Function To find Passwords. Works with library TOML
+    :param file_path: Path to toml File
+    :return: List with passwords
+    """
     with open(file_path, 'r') as tomlfile:
         data, passwords = [toml.load(tomlfile)], []
+        print(toml.load(tomlfile))
+
         while data:
             dict_ = data.pop()
             for key, value in dict_.items():

@@ -14,7 +14,7 @@ float = 20.5
 colors = [ "red", "yellow", "green" ]
 
 ["button/delete"]
-  defaultPassword = "削除 を削除PP"
+  defaultPassword = "削除を削除PP"
 
 ["vert"]
   password = "はい、すべてを削除します"

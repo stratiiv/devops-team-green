@@ -3,11 +3,17 @@ import sys
 
 
 def find_password_in_toml(file_path):
+    """
+    Function To find Passwords. Works like its regular Text file
+    :param file_path: Path to toml File
+    :return: List with passwords
+    """
     with open(file_path, 'r', encoding="utf8") as tomlfile:
-        all_lines = ''
+        all_lines = []
         for line in tomlfile:
             if 'password' in line.lower():
-                all_lines = all_lines + line
+                res = line.split('=')[-1].strip().strip('"')
+                all_lines.append(res)
     return all_lines
 
 
@@ -22,7 +28,7 @@ if __name__ == '__main__':
         file_toml_path = sys.argv[1]
         result = find_password_in_toml(file_toml_path)
 
-        if result == '':
+        if len(result) == 0:
             print("Password not found in the TOML file.")
         else:
             print("Password was found in the TOML file. in such lines: \n", result)
