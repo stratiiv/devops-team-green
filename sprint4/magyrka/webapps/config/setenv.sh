@@ -1,0 +1,1 @@
+export JAVA_OPTS="-DAPP_DB_PASS=\"D52PuG70kx(E?}evtAe03wl2b1JbF(R6\""
