@@ -1,0 +1,8 @@
+!!SCRIPT WAS CREATED EXCLUSIVELY FOR THIS PROJECT INCLUDING PROJECT'S PROBLEMS!!
+#i dont recommend using this script for your project
+
+#Copy your repository in /depl-app
+
+#Place your dump file in /dump
+
+#Check and/or modify bootstrap script in /scripts/bootstrap.sh
