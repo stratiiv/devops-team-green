@@ -1,31 +1,39 @@
-# https://docs.fileformat.com/programming/toml/
 import sys
+import toml
 
 
 def find_password_in_toml(file_path):
-    with open(file_path, 'r', encoding="utf8") as tomlfile:
-        all_lines = ''
-        for line in tomlfile:
-            if 'password' in line.lower():
-                all_lines = all_lines + line
-    return all_lines
+    """
+    Function To find Passwords. Works with library TOML
+    :param file_path: Path to toml File
+    :return: List with passwords
+    """
+    with open(file_path, 'r') as tomlfile:
+        data, passwords = [toml.load(tomlfile)], []
+
+        while data:
+            dict_ = data.pop()
+            for key, value in dict_.items():
+                if 'password' in key.lower():
+                    passwords.append(value)
+                if isinstance(value, dict):
+                    data.append(value)
+        return passwords
 
 
 if __name__ == '__main__':
     try:
-        # Check for the presence of command-line arguments
         if len(sys.argv) != 2:
             print(f"Usage: python find_password_toml.py <toml file path>  ")
             sys.exit(1)
 
-        # Get command-line arguments
         file_toml_path = sys.argv[1]
         result = find_password_in_toml(file_toml_path)
 
-        if result == '':
+        if len(result) == 0:
             print("Password not found in the TOML file.")
         else:
-            print("Password was found in the TOML file. in such lines: \n", result)
-
+            print('\n'.join(result))
     except Exception as e:
         print(str(e))
+
